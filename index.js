@@ -1,3 +1,3 @@
-module.exports = function wrap(n, max) {
-  return n >= 0 ? n % max : max + n % max
+module.exports = function wrap(m, n) {
+  return n >= 0 ? n % m : (n % m + m) % m
 }
