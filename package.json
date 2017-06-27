@@ -1,7 +1,7 @@
 {
  "name": "wrap-around",
  "version": "0.1.0",
- "description": "Wrap values around a range",
+ "description": "Wrap numbers within a certain range",
  "keywords": ["wrap", "around", "range"],
  "files": ["index.js"],
  "license": "MIT",
