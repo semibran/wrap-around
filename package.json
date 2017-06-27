@@ -1,0 +1,13 @@
+{
+ "name": "wrap-around",
+ "version": "0.1.0",
+ "description": "Wrap values around a range",
+ "keywords": ["wrap", "around", "range"],
+ "files": ["index.js"],
+ "license": "MIT",
+ "author": "Brandon Semilla (https://github.com/semibran)",
+ "repository": {
+  "type": "git",
+  "url": "https://github.com/semibran/wrap-around.git"
+ }
+}
