@@ -11,7 +11,7 @@ for (var m = 3, n = -3; n < 9; n++) {
 ```
 
 Some possible uses of this function include:
-- restricting an index to an array range
+- restricting an index to valid array indices
 ```js
 index = wrap(array.length, index)
 ```
@@ -40,13 +40,13 @@ While the modulo operator wraps positive values with ease (it's actually used in
 ```
 
 ### What about loops?
-Loops are a handy way of demonstrating what exactly this function does.
+Using loops for this kind of thing is a handy way of demonstrating what exactly this function does - `wrap(m, n)` produces the same result as two loops forcing a number between the desired range.
 ```js
 while (n < 0) n += m
 while (n >= m) n -= m
 ```
 
-They're also 300x slower.
+Unfortunately, they're also 300x slower. :grimacing:
 ```md
 # wrap 100000 times
 ok ~4.7 ms (0 s + 4696167 ns)
@@ -54,6 +54,8 @@ ok ~4.7 ms (0 s + 4696167 ns)
 # loop 100000 times
 ok ~1.36 s (1 s + 359910028 ns)
 ```
+
+So at the end of the day, you're better off avoid loops for "wrapping" numbers in production code. Use the modulo `%` operator for positive numbers or `wrap-around` if you plan on handling negative numbers.
 
 ## license
 [MIT](https://opensource.org/licenses/MIT) © [Brandon Semilla](https://git.io/semibran)
